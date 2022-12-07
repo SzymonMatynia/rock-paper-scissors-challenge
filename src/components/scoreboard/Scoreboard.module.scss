@@ -1,0 +1,49 @@
+@import './src/assets/scss/variables';
+
+.scoreboard-wrapper {
+  padding: 1.5rem;
+  border: .3rem solid $headerOutline;
+  border-radius: 1rem;
+  max-width: 50rem;
+  width: 100%;
+
+  .scoreboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .game-name {
+      &__element {
+        line-height: 2.6rem;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    }
+
+    .game-score {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      padding: 1rem 3.5rem;
+      border-radius: 1rem;
+      max-width: 6rem;
+      width: 100%;
+
+      &__text {
+        font-size: 1.2rem;
+        color: $scoreText;
+        letter-spacing: .1rem;
+      }
+
+      &__score {
+        color: $darkText;
+        line-height: 5.4rem;
+        font-size: 5.0rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import './src/assets/scss/variables';
+
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
+  .result-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    min-width: 14.5rem;
+
+    &__text {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: $boldWeight;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .summary {
+    order: 1;
+    flex-basis: 100%;
+
+    @media screen and (min-width: $desktop) {
+      order: 0;
+    }
+
+    .summary-button-wrapper {
+      margin: auto;
+      max-width: 200px;
+    }
+
+    &__text {
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+    }
+  }
+}

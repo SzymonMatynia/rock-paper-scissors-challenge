@@ -1,0 +1,57 @@
+@import './src/assets/scss/variables';
+
+@mixin pick-indicator-inside($imagePath) {
+  .pick-indicator {
+    background: white url($imagePath) no-repeat center;
+    box-shadow: inset rgba(0,0,0,.10) 0 3px 0 0;
+  }
+}
+
+.pick-indicator-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11rem;
+  height: 11rem;
+  background: transparent;
+  border-radius: 99rem;
+  box-shadow: inset rgba(0,0,0,.25) 0 3px 0 0;
+
+  &--winner {
+    box-shadow:
+            rgba(255,255,255,0.05) 0 0 0 25px,
+            rgba(255,255,255,0.03) 0 0 0 50px,
+            rgba(255,255,255,0.01) 0 0 0 75px;
+  }
+
+  .pick-indicator {
+    width: 9rem;
+    height: 9rem;
+    border-radius: inherit;
+  }
+
+  &--paper {
+    background: linear-gradient(to bottom, $paperGradient);
+    @include pick-indicator-inside("./../../assets/images/icon-paper.svg");
+  }
+
+  &--scissors {
+    background: linear-gradient(to bottom, $scissorsGradient);
+    @include pick-indicator-inside("./../../assets/images/icon-scissors.svg");
+  }
+
+  &--rock {
+    background: linear-gradient(to bottom, $rockGradient);
+    @include pick-indicator-inside("./../../assets/images/icon-rock.svg");
+  }
+
+  &--empty {
+    box-shadow: none;
+    .pick-indicator {
+      background: $emptyType;
+    }
+
+  }
+
+
+}

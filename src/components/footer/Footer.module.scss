@@ -1,0 +1,11 @@
+@import './src/assets/scss/variables';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media only screen and (min-width: $desktop) {
+        justify-content: end;
+    }
+}
