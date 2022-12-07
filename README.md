@@ -1,3 +1,6 @@
+### Check this project deployed on Vercel
+[https://rock-paper-scissors-challenge-eight.vercel.app/](https://rock-paper-scissors-challenge-eight.vercel.app/)
+
 ### build & run (npm)
 `npm i` to install dependencies
 
